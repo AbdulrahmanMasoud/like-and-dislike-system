@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://png.pngtree.com/element_our/png/20181124/thumb-up-cartoon-png_246633.jpg" width="400"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://purepng.com/public/uploads/large/heart-icon-y1k.png" width="200"></a></p>
 
 
 ## Like And DisLike System Using Laravel Framwork And Livewire Packedg
