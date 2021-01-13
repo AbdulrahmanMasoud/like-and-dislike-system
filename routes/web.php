@@ -3,6 +3,7 @@
 
 use App\Http\Controllers\UserController;
 use App\Http\Livewire\Posts;
+use App\Http\Livewire\PostsHasLike;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,4 +38,5 @@ Route::get('/logout', function () {
 });
 
 Route::get('/posts', Posts::class);
+Route::get('/posts-has-likes', PostsHasLike::class)->name('posts.likes');
 

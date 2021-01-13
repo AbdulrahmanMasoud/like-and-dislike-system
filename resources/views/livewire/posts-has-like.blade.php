@@ -23,29 +23,20 @@
          {{-- Logout --}}
         <div class="mx-3"><a href="logout">Logout</a></div>
     </nav>
-    {{-- Post Section --}}
+    {{-- Get All Posts Has Likes --}}
       <section class="posts">
-      @foreach ($posts as $post)
+      @foreach ($posts_has_likes as $post)
       <div class="card w-50 mx-auto my-5">
         <div class="card-header">
           <span>POST ID <b>{{$post->id}}</b></span>
-          {{-- If this Post Likes Count > 0 make this action [Delete Like]--}}
-          @if ($post->likes->where('user_id',session('user')['id'])->where('post_id',$post->id)->count()>0)
-          <span class="float-right"  wire:click='dislike({{$post->id}},{{session('user')['id']}})'>
-            <i class="fas fa-heart"></i>
+          {{-- This To Delete Post From Posts has Like Page --}}
+          <span class="float-right "  wire:click='dislike({{$post->id}},{{session('user')['id']}})'>
+            <i class="fas fa-trash-alt "></i>
           </span>
-          @else 
-          {{-- If this Post Likes Count < 0 make this action [Add Like]--}}
-          <span class="float-right"  wire:click='store({{$post->id}},{{session('user')['id']}})'>
-            <i class="far fa-heart"></i>
-          </span>
-          @endif
-          {{-- This Count Of Likes For This Post --}}
-            <span class="likes float-right mr-3">{{$post->likes->count()}}</span>
         </div>
         <div class="card-body">
-        {{-- This Is a Post Content --}}
-          <p class="card-text">{{$post->post}}</p>
+            {{-- This For Post Content --}}
+            {{$post->post}}
         </div>
       </div>
           
