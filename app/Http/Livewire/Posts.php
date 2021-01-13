@@ -22,8 +22,7 @@ class Posts extends Component
     public function dislike($post_id,$user_id){
         Like::where('post_id',$post_id)->where('user_id',$user_id)->delete();
      }
-     
-     
+    
      
   
 
